@@ -1,0 +1,65 @@
+/* 基本全體樣式 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header, nav, section, footer {
+    display: block;
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* 導航樣式 */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0275d8;
+}
+
+nav a:hover {
+    color: #01447e;
+}
+
+/* 段落文字樣式 */
+p {
+    margin: 0 0 10px 0;
+}
+
+/* 關於、服務和聯絡方式區塊 */
+section {
+    margin-bottom: 20px;
+}
+
+/* 頁腳樣式 */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    clear: both;
+}
+
+footer p {
+    margin: 0;
+}

@@ -1,98 +1,92 @@
-/* 基本全體樣式 */
+/* 設定基本字體和頁面背景顏色 */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #2db4f3;
 }
-header {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    align-items: center;
-}
-nav{
-    display: block;
-    margin: 10px;
-    background: white;
-    border-radius: 8px;
-    
-}
-section{
-    display: block;
-    margin: 10px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-footer{
-    display: block;
-    margin: 10px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-h1, h2 {
-    color: #333;
-}
-h2{
-    padding: 10px;
-    display: inline-table;
-    background-color: rgb(250, 253, 49); 
-    border-radius: 15px;
-    align-items: center;
 
+/* 設定頁首樣式 */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
-/* 導航樣式 */
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
-    padding: 10px;
-    background-color: rgb(224, 176, 18);
-    border-radius: 15px; 
+    margin-right: 20px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #000000;
-}
-
-nav a:hover {
-    color: #01447e;
-}
-
-/* 段落文字樣式 */
-p {
-    margin: 0 0 10px 0;
-}
-
-/* 關於、服務和聯絡方式區塊 */
-section {
-    margin-bottom: 20px;
-}
-
-/* 頁腳樣式 */
-footer {
-    text-align: center;
-    padding: 10px 20px;
-    background-color: #222;
+nav ul li a {
     color: white;
-    clear: both;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-footer p {
-    margin: 0;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 設定每個 section 的樣式 */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+/* 關於我們 section 的樣式 */
+#about {
+    background-color: #e9f7f7;
+}
+
+/* 產品 section 的樣式 */
+#services {
+    background-color: #f9f9f9;
+}
+
+/* 聯絡方式 section 的樣式 */
+#contact {
+    background-color: #e9f7f7;
+}
+
+/* 設定聯絡方式的超連結樣式 */
+#contact a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* 頁尾樣式 */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

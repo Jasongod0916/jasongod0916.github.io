@@ -68,6 +68,16 @@ section h2 {
 /* 聯絡方式 section 的樣式 */
 #contact {
     background-color: #e9f7f7;
+    padding: 5%;
+    text-align: center;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: start;
+    display: flex;
+    justify-content: center;
 }
 
 /* 設定聯絡方式的超連結樣式 */

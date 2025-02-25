@@ -12,27 +12,55 @@
         <nav>
             <ul>
                 <li><a href="#about">關於我們</a></li>
-                <li><a href="#services">產品</a></li>
+                <li><a href="#services">作品區</a></li>
                 <li><a href="#contact">聯絡方式</a></li>
             </ul>
         </nav>     
     </header>
     
     <section id="about">
-        <h2>關於我們</h2>
-        <p>致力於生產美好的AI照片</p>
+        <h2>簡介</h2>
+        <p>這是一個靜態攝影網站，專注於捕捉靜謐而細膩的瞬間，透過光影與構圖展現畫面的故事感。無論是自然景色、日常物件，還是特殊主題，每張照片都經過精心挑選與呈現，帶給觀者沉靜與美感的體驗。在這裡，可以欣賞各種靜態攝影作品，感受影像帶來的情感與氛圍。</p>
         
     </section>
     <section id="services">
-        <h2>產品</h2>
+        <h2>作品區</h2>
+        <p>以下是我們的作品集，歡迎欣賞與分享。</p>
+        <div class="gallery" style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div class="gallery-item" style="flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
+            <img src="1.jpg" alt="photo1" style="width: 100%;">
+            <h3>自然風景</h3>
+            <p>這是一張自然風景照片，展示了大自然的美麗與神秘。</p>
+            </div>
+            <div class="gallery-item" style="flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
+            <img src="images/photo2.jpg" alt="photo2" style="width: 100%;">
+            <h3>日常物件</h3>
+            <p>這是一張日常物件照片，展示了生活中的細微與美好。</p>
+            </div>
+            <div class="gallery-item" style="flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
+            <img src="images/photo3.jpg" alt="photo3" style="width: 100%;">
+            <h3>特殊主題</h3>
+            <p>這是一張特殊主題照片，展示了特殊主題的獨特與魅力。</p>
+            </div>
+        </div>
+        <!-- 把以上class="gallery"變成水平排版 -->
+
+
+
     </section>
     <section id="contact">
         <h2>聯絡方式</h2>
-        <p>有任何問題，請通過下面的方式與我們聯絡：</p>
-        <ul>
-            <li>電話：0912345678</li>
-            <li>郵箱：<a href="mailto:jasonchiu0916@gmail.com">jasonchiu0916@gmail.com</a></li>
-        </ul>
+        <table style="margin: 0 auto;">
+            <tr>
+                <td style="text-align: left;">電話：</td>
+                <td style="text-align: left;">0912345678</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">郵箱：</td>
+                <td><a href="mailto:jasonchiu0916@gmail.com">jasonchiu0916@gmail.com</a></td>
+            </tr>
+        </table>
+
     </section>
     <footer>
         <p>&copy; 2024 邱網。版權所有。</p>

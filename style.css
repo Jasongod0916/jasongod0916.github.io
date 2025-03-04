@@ -20,6 +20,12 @@ header h1 {
     font-size: 2em;
 }
 
+.header-container {
+    display: flex;           /* 啟用 flexbox */
+    justify-content: space-between;  /* 使標題和按鈕水平排列並間距合理 */
+    align-items: center;     /* 使標題和按鈕在垂直方向居中對齊 */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;

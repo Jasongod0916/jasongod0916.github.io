@@ -59,7 +59,7 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-/* ---------------------------------------------------------------- */
+/* =================================================================== */
 .top{
     display: flex;
     flex-direction: column;
@@ -123,7 +123,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* ---------------------------------------------------------------- */
+/* =================================================================== */
 .middle{
     display: flex;
     background-color: #f4f4f4;
@@ -209,7 +209,7 @@ button {
     color: #f9f9f9;
     font-weight: bold;
 }
-/* ---------------------------------------------------------------- */
+/* =================================================================== */
 /* 容器負責排版 */
 .gallery-container {
     display: flex;             /* 讓子元素並排 */
@@ -252,31 +252,31 @@ button {
 table{
     margin: 0 auto;
 }
-/* ------------------------------------------------------------------ */
+/* =================================================================== */
 
 .logo .circle .arrow {
-position: fixed;
-width: 4%;
-height: 4%;
-top: 3%;
-left: 50%;
-/* 關鍵：水平居中 → 往左移自身寬度的一半 */
-transform: translateX(-50%) rotate(0deg);
+    position: fixed;
+    width: 4%;
+    height: 4%;
+    top: 3%;
+    left: 50%;
+    /* 關鍵：水平居中 → 往左移自身寬度的一半 */
+    transform: translateX(-50%) rotate(0deg);
 
-background-image: url('./camera-reels.svg'); 
-filter: invert(100%); 
-background-position: center;
-background-repeat: no-repeat;
-background-size: contain;
+    background-image: url('./camera-reels.svg'); 
+    filter: invert(100%); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
-transition: transform 0.1s linear;  /* 平滑旋轉 */
+    transition: transform 0.1s linear;  /* 平滑旋轉 */
 }
-/* ===================================== */
+/* =================================================================== */
 .global-main {
     flex: 1 0 auto;
     width: 100%;
-    margin: 0 auto;
-  }
+    /* margin-top: 100px;  */
+}
   
 .post-progress,
 .post-progress[value]::-webkit-progress-bar {

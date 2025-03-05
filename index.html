@@ -3,79 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>我的首頁</title>
+    <title>攝影天地</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.lottielab.com/s/lottie-player@1.x/player-web.min.js"></script>
-    
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- 如果想使用 CDN 方式（線上） -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 
 </head>
 <body>
     <header>
-        <h1>U1033043 邱世宇 &nbsp;</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">關於我們</a></li>
-                <li><a href="#services">作品區</a></li>
-                <li><a href="#contact">聯絡方式</a></li>
-                <li>
-                <a href="https://chatgpt.com/" target="_blank">
-                    <lottie-player 
-                    src="https://cdn.lottielab.com/l/kcLFu3C8FP7eA0.json" 
-                    loop 
-                    autoplay 
-                    style="width: 10%; height: 10%; border-radius: 50px;"></lottie-player>
-                    
-                </a>
-                </li>
-               
-
-            </ul>
-        </nav>     
+        <div class="top-container" >
+            <h1>每日一攝 &nbsp;</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-buildings-fill" viewBox="0 0 16 16">
+                            <path d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zM2 11h1v1H2zm2 0h1v1H4zm-1 2v1H2v-1zm1 0h1v1H4zm9-10v1h-1V3zM8 5h1v1H8zm1 2v1H8V7zM8 9h1v1H8zm2 0h1v1h-1zm-1 2v1H8v-1zm1 0h1v1h-1zm3-2v1h-1V9zm-1 2h1v1h-1zm-2-4h1v1h-1zm3 0v1h-1V7zm-2-2v1h-1V5zm1 0h1v1h-1z"/>
+                        </svg>
+                        <a href="#about">關於我們</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
+                            <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                            <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2M14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1M2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1z"/>
+                        </svg>
+                        <a href="#services">作品區</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                          </svg>
+                        <a href="#contact">聯絡方式</a>
+                    </li>
+                </ul>
+            </nav>   
+        </div>
+          
     </header>
-    
-    <section id="about">
-        <h2>簡介</h2>
-        <p>這是一個靜態攝影網站，專注於捕捉靜謐而細膩的瞬間，透過光影與構圖展現畫面的故事感。無論是自然景色、日常物件，還是特殊主題，每張照片都經過精心挑選與呈現，帶給觀者沉靜與美感的體驗。在這裡，可以欣賞各種靜態攝影作品，感受影像帶來的情感與氛圍。</p>
-        
-    </section>
-    <section id="services">
-        
-        <div class="header-container">
-            <h2>作品區</h2>
-            <a href="/product.html" target="_blank">
-                <button >
-                    More
-                </button>
-            </a>
+    <!-- TOP -->
+    <div class="top">
+
+        <div class="wrapper">
+            <!-- 第一條：由下往上 -->
+            <div class="basic-staggering-demo up-dist"></div>
+            <!-- 第二條：由上往下 -->
+            <div class="basic-staggering-demo down-dist"></div>
         </div>
 
-        
-        
-        <p>以下是我們的作品集，歡迎欣賞與分享。</p>
-        <div class="gallery" style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <div class="gallery-item" style="flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
-            <img src="1.jpg" alt="photo1" style="width: 100%;">
-            <h3>自然風景</h3>
-            <p>這是一張自然風景照片，展示了大自然的美麗與神秘。</p>
-            </div>
-            <div class="gallery-item" style="flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
-            <img src="images/photo2.jpg" alt="photo2" style="width: 100%;">
-            <h3>日常物件</h3>
-            <p>這是一張日常物件照片，展示了生活中的細微與美好。</p>
-            </div>
-            <div class="gallery-item" style="flex: 1 1 calc(33.333% - 20px); box-sizing: border-box;">
-            <img src="images/photo3.jpg" alt="photo3" style="width: 100%;">
-            <h3>特殊主題</h3>
-            <p>這是一張特殊主題照片，展示了特殊主題的獨特與魅力。</p>
-            </div>
+        <!-- 按鈕容器 -->
+        <div class="btn-wrapper">
+            <button id="replayBtn">Fun</button>
         </div>
-        
-    </section>
+        <div style="width: 80%; height: 1px; background: #ffffff; margin: 30px;"></div>
+
+        <!-- 簡介 -->
+        <section id="about">
+            <img src="1.jpg" alt="photo1" style="width: 30%;">
+            <div class="about_1">
+                <h2>簡介</h2>
+                <p>這是一個靜態攝影網站，專注於捕捉靜謐而細膩的瞬間，透過光影與構圖展現畫面的故事感。無論是自然景色、日常物件，還是特殊主題，每張照片都經過精心挑選與呈現，帶給觀者沉靜與美感的體驗。在這裡，可以欣賞各種靜態攝影作品，感受影像帶來的情感與氛圍。</p>
+            </div>
+        </section>
+
+    </div>
+    <!-- 作品區 -->
+    <div class="middle">
+        <section id="products">
+            <div class="products-container">
+                <h2>作品區</h2>
+                <a href="/product.html" target="_blank">
+                    <button >More</button>
+                </a>
+            </div>
+            <p>以下是我們的作品集，歡迎欣賞與分享。</p>
+        </section>
+        <!-- 作品區 -->
+        <section id="services">
+            
+            <div class="gallery-container" >
+                <div class="gallery-item" >
+                    <img src="1.jpg" alt="photo1" style="width: 100%;">
+                    <div class="discript" >
+                        <h3>自然風景</h3>
+                        <p>這是一張自然風景照片，展示了大自然的美麗與神秘。</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" >
+                    <img src="1.jpg" alt="photo2" style="width: 100%;">
+                    <div class="discript" >
+                        <h3>日常物件</h3>
+                        <p>這是一張日常物件照片，展示了生活中的細微與美好。</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" >
+                    <img src="1.jpg" alt="photo3" style="width: 100%;">
+                    <div class="discript" >
+                        <h3>特殊主題</h3>
+                        <p>這是一張特殊主題照片，展示了特殊主題的獨特與魅力。</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
     <section id="contact">
-        <h2>聯絡方式</h2>
-        <table style="margin: 0 auto;">
-            <tr>
+        
+        <table>
+            <h2 style="color: white;">聯絡方式</h2>
+            <tr style="margin-left: 2px;"></tr>
                 <td style="text-align: left;">電話：</td>
                 <td style="text-align: left;">0912345678</td>
             </tr>
@@ -84,10 +123,62 @@
                 <td><a href="mailto:jasonchiu0916@gmail.com">jasonchiu0916@gmail.com</a></td>
             </tr>
         </table>
-
+        
     </section>
-    <footer>
+    <div class="foot">
         <p>&copy; 2024 邱網。版權所有。</p>
-    </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const count = 30;
+            const mean = (count - 1) / 2; // 中間索引
+            const sd = 5;                 // 標準差
+            const scale = 180;            // 高度縮放
+        
+            // 建立兩個容器參照
+            const upContainer = document.querySelector('.up-dist');
+            const downContainer = document.querySelector('.down-dist');
+        
+            //建立 
+            for (let i = 1; i <= count; i++) {
+            const el = document.createElement('div');
+            el.className = 'el';
+            upContainer.appendChild(el);
+            }
+
+            for (let i = 1; i <= count; i++) {
+            const el = document.createElement('div');
+            el.className = 'el';
+            downContainer.appendChild(el);
+            }
+
+            // 各自計算常態分佈位移
+            const yPositionsUp = Array.from({ length: count }, (_, i) => {
+                const dist = i - mean;
+                return -scale * Math.exp(-(dist * dist) / (2 * sd * sd)); // 往上
+            });
+            function runAnimation() {
+                // 先重置所有球的位置 (把 transform 清空)
+                anime.set('.up-dist .el', {
+                    translateY: 0
+                });
+                // 動畫：由下往上
+                anime({
+                    targets: '.up-dist .el',
+                    translateY: (el, i) => [0, yPositionsUp[i]],
+                    delay: (el, i) => Math.abs(i - mean) * 80, // 中間那顆先動
+                    duration: 1000,
+                    easing: 'easeOutQuad'
+                });
+            }
+            runAnimation();
+            
+            // 再次播放動畫
+            replayBtn.addEventListener('click', () => {
+                runAnimation();
+            });
+
+        });
+        </script>
 </body>
 </html>

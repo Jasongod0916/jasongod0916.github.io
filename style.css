@@ -115,12 +115,7 @@ nav ul li a:hover {
     justify-content: center;  
     font-weight: bold;
 }
-#replayBtn{
-    background-color: #eee;
-    color: #1f1f1f;
-    border-radius: 15px;
-    font-weight: bold;
-}
+
 /* ---------------------------------------------------------------- */
 .middle{
     display: flex;
@@ -175,7 +170,7 @@ nav ul li a:hover {
 /* 頁尾樣式 */
 .foot {
     background-color: #1f1f1f;
-    color: white;
+    color: #f9f9f9;
     text-align: center;
     padding: 10px ;
     
@@ -188,11 +183,22 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #4CAF50;
-    color: white;
+    color: #f9f9f9;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
+#replayBtn{
+    background-color: #f9f9f9;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+#moreBtn{
+    background-color: #1f1f1f;
+    color: #f9f9f9;
+    font-weight: bold;
+}
+/* ---------------------------------------------------------------- */
 /* 容器負責排版 */
 .gallery-container {
     display: flex;             /* 讓子元素並排 */

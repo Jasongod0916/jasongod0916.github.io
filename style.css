@@ -9,25 +9,29 @@ body {
 
 /* 設定頁首樣式 */
 header {
-    background-color: #333;
-    color: white;
+    background-color: #1f1f1f;
+    color: #f4f4f4;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    margin: 20px;
     font-size: 2em;
+    text-align: left;
 }
 
-.header-container {
+/* 設定頁首的超連結樣式 */
+.top-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 10px;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
+/* navbar */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -39,7 +43,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #f4f4f4;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
@@ -48,35 +52,106 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-
-/* 設定每個 section 的樣式 */
-section {
-    padding: 40px 20px;
-    margin: 20px 0;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* ---------------------------------------------------------------- */
+.top{
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    
 }
-
-section h2 {
-    font-size: 1.8em;
-    color: #333;
-}
-
-/* 關於我們 section 的樣式 */
 #about {
-    background-color: #e9f7f7;
+    background-color: #1f1f1f;
+    color: #f4f4f4;
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    margin-bottom: 50px;
 }
+.about_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+#about h2{
+    font-size: 2em;
+ 
+}
+#about p{
+    font-size: 1.5em;
+    line-height: 1.6;
+    
+}
+#about img{
+    border-radius: 20px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column; /* 讓兩個區塊上下排列；若要左右並排，可改 row */
+    align-items: center;
+    gap: 10px;             /* 兩條分佈之間的距離 */
+    margin-top: 200px;
+    margin-bottom: 50px;
+  }
+.basic-staggering-demo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;         /* 每個球之間的水平間距 */
+}
+.el {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;   /* 置中文字 */
+    justify-content: center;  
+    font-weight: bold;
+}
+#replayBtn{
+    background-color: #eee;
+    color: #1f1f1f;
+    border-radius: 15px;
+    font-weight: bold;
+}
+/* ---------------------------------------------------------------- */
+.middle{
+    display: flex;
+    background-color: #f4f4f4;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+#products {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+.products-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 
 /* 產品 section 的樣式 */
 #services {
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
 }
 
 /* 聯絡方式 section 的樣式 */
 #contact {
-    background-color: #e9f7f7;
-    padding: 5%;
+    background-color: #1f1f1f;
+    color: #f9f9f9;
+    padding: 20px;
     text-align: center;
 }
 
@@ -90,24 +165,24 @@ section h2 {
 
 /* 設定聯絡方式的超連結樣式 */
 #contact a {
-    color: #007BFF;
+    color: #f9f9f9;
     text-decoration: none;
 }
 
 #contact a:hover {
     text-decoration: underline;
 }
-
 /* 頁尾樣式 */
-footer {
-    background-color: #333;
+.foot {
+    background-color: #1f1f1f;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    padding: 10px ;
+    
     bottom: 0;
     width: 100%;
 }
+
 /* 按鈕 */
 button {
     padding: 10px 20px;
@@ -118,3 +193,41 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+/* 容器負責排版 */
+.gallery-container {
+    display: flex;             /* 讓子元素並排 */
+    flex-wrap: wrap;           /* 超出範圍時換行 */
+    gap: 20px;                 /* 元素間的間距 */
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+}
+/* 個別照片項目 */
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* 圖片設定 */
+.gallery-item img {
+    max-width: 400px;    /* 設定圖片最大寬度 */
+    height: auto;
+    display: block; 
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.discript{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+table{
+    margin: 0 auto;
+
+}
+/* ------------------------------------------------------------------ */
+

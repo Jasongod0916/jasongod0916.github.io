@@ -5,14 +5,17 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    height: auto;
+      
 }
 
 /* 設定頁首樣式 */
 header {
-    background-color: #1f1f1f;
+    position: fixed;
     color: #f4f4f4;
-    padding: 20px 0;
+    padding: 10px;
     text-align: center;
+    width: 100%;
 }
 
 header h1 {
@@ -23,15 +26,19 @@ header h1 {
 
 /* 設定頁首的超連結樣式 */
 .top-container {
+    position: fixed; 
+    top: 0;               /* 緊貼視窗頂端 */
+    left: 0;              /* 從左側開始 */
+    width: 100%;          /* 讓 header 佔滿整個寬度 */
+    background-color: #1f1f1f;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    margin-left: 50px;
-    margin-right: 50px;
+    color: #f4f4f4;
+
+    z-index: 999;        /* 確保層級在其他元素之上 (以免被蓋住)*/ 
 }
 
-/* navbar */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -96,7 +103,7 @@ nav ul li a:hover {
     flex-direction: column; /* 讓兩個區塊上下排列；若要左右並排，可改 row */
     align-items: center;
     gap: 10px;             /* 兩條分佈之間的距離 */
-    margin-top: 200px;
+    margin-top: 300px;
     margin-bottom: 50px;
   }
 .basic-staggering-demo {
@@ -123,19 +130,23 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+}
+.products-container{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    font-size: 1.5em;
 }
 #products {
+    width: 100%;
     display: flex;
     padding: 20px;
     flex-direction: column;
 }
-.products-container{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 
 /* 產品 section 的樣式 */
 #services {
@@ -203,7 +214,7 @@ button {
 .gallery-container {
     display: flex;             /* 讓子元素並排 */
     flex-wrap: wrap;           /* 超出範圍時換行 */
-    gap: 20px;                 /* 元素間的間距 */
+    gap: 0px;                 /* 元素間的間距 */
     box-sizing: border-box;
     border-radius: 20px;
     padding: 20px;
@@ -231,9 +242,66 @@ button {
     align-items: center;
     flex-direction: column;
 }
+.discript h3{
+    font-size: 1.5em;
+}
+.discript p{
+    font-size: 1.2em;
+}
 table{
     margin: 0 auto;
-
 }
 /* ------------------------------------------------------------------ */
 
+.logo .circle .arrow {
+position: fixed;
+width: 4%;
+height: 4%;
+top: 3%;
+left: 50%;
+/* 關鍵：水平居中 → 往左移自身寬度的一半 */
+transform: translateX(-50%) rotate(0deg);
+
+background-image: url('./camera-reels.svg'); 
+filter: invert(100%); 
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+
+transition: transform 0.1s linear;  /* 平滑旋轉 */
+}
+/* ===================================== */
+.global-main {
+    flex: 1 0 auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+.post-progress,
+.post-progress[value]::-webkit-progress-bar {
+    background-color: transparent;
+}
+.post-progress {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    transition: opacity .15s ease-out .3s;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+progress {
+    vertical-align: baseline;
+}
+.post-progress::-webkit-progress-value {
+    background-color: #f9f9f9;
+}
+.post-progress::-moz-progress-bar {
+    background-color: #f9f9f9;
+}
+  

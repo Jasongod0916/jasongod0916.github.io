@@ -9,6 +9,7 @@ body {
 }
 /* 基本按鈕 */
 button {
+    display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #4CAF50;
@@ -17,6 +18,7 @@ button {
     border-radius: 15px;
     cursor: pointer;
 }
+
 /* ===========================最上層header============================ */
 header {
     position: fixed;
@@ -196,7 +198,13 @@ nav ul li a:hover {
     display: block; 
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease;
 }
+.gallery-item img:hover {
+    transform: scale(1.05);
+  }
+  
 .discript{
     display: flex;
     align-items: center;

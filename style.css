@@ -6,39 +6,46 @@ body {
     margin: 0;
     padding: 0;
     height: auto;
-      
 }
-
-/* 設定頁首樣式 */
+/* 基本按鈕 */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #f9f9f9;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/* ===========================最上層header============================ */
 header {
     position: fixed;
     color: #f4f4f4;
     padding: 10px;
     text-align: center;
     width: 100%;
+    z-index: 998;
+    /* z-index: 999; 確保層級在其他元素之上  */
 }
-
 header h1 {
     margin: 20px;
     font-size: 2em;
     text-align: left;
 }
-
-/* 設定頁首的超連結樣式 */
+/* 設定右上角超連結樣式 */
 .top-container {
     position: fixed; 
-    top: 0;               /* 緊貼視窗頂端 */
-    left: 0;              /* 從左側開始 */
-    width: 100%;          /* 讓 header 佔滿整個寬度 */
+    top: 0;               
+    left: 0;              
+    width: 100%;          
     background-color: #1f1f1f;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #f4f4f4;
 
-    z-index: 999;        /* 確保層級在其他元素之上 (以免被蓋住)*/ 
+    z-index: 999; /* 確保層級在其他元素之上*/ 
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -59,7 +66,7 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-/* =================================================================== */
+/* ======================TOP層(球動畫 簡介)====================================== */
 .top{
     display: flex;
     flex-direction: column;
@@ -69,35 +76,7 @@ nav ul li a:hover {
     height: auto;
     
 }
-#about {
-    background-color: #1f1f1f;
-    color: #f4f4f4;
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    border-radius: 20px;
-    margin-bottom: 50px;
-}
-.about_1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 30px;
-}
-#about h2{
-    font-size: 2em;
- 
-}
-#about p{
-    font-size: 1.5em;
-    line-height: 1.6;
-    
-}
-#about img{
-    border-radius: 20px;
-}
+/* 球動畫===================== */
 .wrapper {
     display: flex;
     flex-direction: column; /* 讓兩個區塊上下排列；若要左右並排，可改 row */
@@ -122,14 +101,56 @@ nav ul li a:hover {
     justify-content: center;  
     font-weight: bold;
 }
+#replayBtn{
+    background-color: #f9f9f9;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+/* 簡介===================== */
+#about {
+    background-color: #1f1f1f;
+    color: #f4f4f4;
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    margin-bottom: 50px;
 
-/* =================================================================== */
+    scroll-margin-top: 80px;/* 根據 header 的高度調整 */
+}
+.about_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+#about h2{
+    font-size: 2em;
+ 
+}
+#about p{
+    font-size: 1.5em;
+    line-height: 1.6;
+    
+}
+#about img{
+    border-radius: 20px;
+}
+/* ======================作品區====================================== */
 .middle{
     display: flex;
-    background-color: #f4f4f4;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+}
+#products {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+
+    scroll-margin-top: 80px;/* 根據 header 的高度調整 */
 }
 .products-container{
     width: auto;
@@ -141,76 +162,15 @@ nav ul li a:hover {
     text-align: center;
     font-size: 1.5em;
 }
-#products {
-    width: 100%;
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
-}
-
-/* 產品 section 的樣式 */
-#services {
-    background-color: #f4f4f4;
-}
-
-/* 聯絡方式 section 的樣式 */
-#contact {
-    background-color: #1f1f1f;
-    color: #f9f9f9;
-    padding: 20px;
-    text-align: center;
-}
-
-#contact ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: start;
-    display: flex;
-    justify-content: center;
-}
-
-/* 設定聯絡方式的超連結樣式 */
-#contact a {
-    color: #f9f9f9;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-/* 頁尾樣式 */
-.foot {
-    background-color: #1f1f1f;
-    color: #f9f9f9;
-    text-align: center;
-    padding: 10px ;
-    
-    bottom: 0;
-    width: 100%;
-}
-
-/* 按鈕 */
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: #f9f9f9;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-#replayBtn{
-    background-color: #f9f9f9;
-    color: #1f1f1f;
-    font-weight: bold;
-}
 #moreBtn{
     background-color: #1f1f1f;
     color: #f9f9f9;
     font-weight: bold;
 }
-/* =================================================================== */
-/* 容器負責排版 */
+/* 圖片區======================*/
+#services {
+    background-color: #f4f4f4;
+}
 .gallery-container {
     display: flex;             /* 讓子元素並排 */
     flex-wrap: wrap;           /* 超出範圍時換行 */
@@ -249,11 +209,44 @@ button {
 .discript p{
     font-size: 1.2em;
 }
+
+/* ==================== 聯絡 ================================ */
+#contact {
+    background-color: #1f1f1f;
+    color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+}
+/* 設定聯絡方式的超連結樣式 */
+#contact a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+#contact a:hover {
+    text-decoration: underline;
+}
+/* 聯絡資訊====================*/
 table{
     margin: 0 auto;
 }
-/* =================================================================== */
-
+/* 頁尾樣式====================*/
+.foot {
+    background-color: #1f1f1f;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 10px ;
+    
+    bottom: 0;
+    width: 100%;
+}
+/* =======================進度條動畫 選轉=================================== */
 .logo .circle .arrow {
     position: fixed;
     width: 4%;
@@ -271,7 +264,7 @@ table{
 
     transition: transform 0.1s linear;  /* 平滑旋轉 */
 }
-/* =================================================================== */
+/* ==========================進度條動畫================================ */
 .global-main {
     flex: 1 0 auto;
     width: 100%;
@@ -295,6 +288,8 @@ table{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    /* 層級 */
+    z-index: 999;
 }
 progress {
     vertical-align: baseline;
@@ -305,4 +300,5 @@ progress {
 .post-progress::-moz-progress-bar {
     background-color: #f9f9f9;
 }
+/* =================================================================== */
   

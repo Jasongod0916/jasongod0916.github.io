@@ -181,7 +181,7 @@ nav ul li a:hover {
 .gallery-container {
     display: flex;             /* 讓子元素並排 */
     flex-wrap: wrap;           /* 超出範圍時換行 */
-    gap: 0px;                 /* 元素間的間距 */
+    gap: 10px;                 /* 元素間的間距 */
     box-sizing: border-box;
     border-radius: 20px;
     padding: 20px;

@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- 如果想使用 CDN 方式（線上） -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <progress class="post-progress" value="0" max="100"></progress>
@@ -63,38 +63,42 @@
             </section>
 
             <!-- 作品區 -->
-            <section id="services">
-                
-                <div class="gallery-container" >
-                    <div class="gallery-item" >
-                        <img src="1.jpg" alt="photo1" style="width: 100%;">
+            <div data-aos="fade-up" data-aos-duration="3000">
 
-                        <div class="discript" >
-                            <h3>自然風景</h3>
-                            <p>這是一張自然風景照片，展示了大自然的美麗與神秘。</p>
+                <section id="services">
+                    
+                    <div class="gallery-container" >
+                        <div class="gallery-item" >
+                            <img src="1.jpg" alt="photo1" style="width: 100%;">
+
+                            <div class="discript" >
+                                <h3>自然風景</h3>
+                                <p>這是一張自然風景照片，展示了大自然的美麗與神秘。</p>
+                            </div>
                         </div>
+
+                        <div class="gallery-item" >
+                            <img src="1.jpg" alt="photo2" style="width: 100%;">
+
+                            <div class="discript" >
+                                <h3>日常物件</h3>
+                                <p>這是一張日常物件照片，展示了生活中的細微與美好。</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" >
+                            <img src="1.jpg" alt="photo3" style="width: 100%;">
+
+                            <div class="discript" >
+                                <h3>特殊主題</h3>
+                                <p>這是一張特殊主題照片，展示了特殊主題的獨特與魅力。</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="gallery-item" >
-                        <img src="1.jpg" alt="photo2" style="width: 100%;">
-
-                        <div class="discript" >
-                            <h3>日常物件</h3>
-                            <p>這是一張日常物件照片，展示了生活中的細微與美好。</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" >
-                        <img src="1.jpg" alt="photo3" style="width: 100%;">
-
-                        <div class="discript" >
-                            <h3>特殊主題</h3>
-                            <p>這是一張特殊主題照片，展示了特殊主題的獨特與魅力。</p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
         
         <section id="contact">
@@ -116,6 +120,10 @@
             <p>&copy; 2024 邱網。版權所有。</p>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const count = 40;

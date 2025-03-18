@@ -51,6 +51,8 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 nav ul li {

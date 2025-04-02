@@ -1,4 +1,5 @@
 /* 設定基本字體和頁面背景顏色 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -6,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     height: auto;
+    font-family: 'Noto Sans TC',sans-serif !important;
 }
 /* 基本按鈕 */
 button {
@@ -145,8 +147,13 @@ nav ul li a:hover {
     line-height: 1.6;
     
 }
-#about a img{
+#about img{
     border-radius: 20px;
+    width: 25%;    /* 設定圖片最大寬度 */
+    height: 25%;
+    display: block; 
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* ======================作品區====================================== */
 .middle{
@@ -202,7 +209,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+    align-content: space-between;
 }
 /* 圖片設定 */
 .gallery-item img {
@@ -233,10 +240,14 @@ nav ul li a:hover {
 
 /* ==================== 聯絡 ================================ */
 #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #1f1f1f;
     color: #f9f9f9;
     padding: 20px;
     text-align: center;
+    height: 250px;
 }
 #contact ul {
     list-style-type: none;
@@ -244,6 +255,21 @@ nav ul li a:hover {
     text-align: start;
     display: flex;
     justify-content: center;
+}
+.contact-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.social-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 0; /* 上下設定20px間距 */
+}
+.social-icon {
+    text-align: left;
+    padding: 0 10px;
 }
 /* 設定聯絡方式的超連結樣式 */
 #contact a {
@@ -254,8 +280,8 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 /* 聯絡資訊====================*/
-table{
-    margin: 0 auto;
+table td{
+    padding: 5px 0; /* 上下設定20px間距 */
 }
 /* 頁尾樣式====================*/
 .foot {

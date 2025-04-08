@@ -48,29 +48,24 @@
             </div>
             
         </header>
-
-        <!-- 作品區 -->
-        <div class="middle" style="margin-top: 100px;">
-
-            <section id="products">
-                <div class="products-container">
-                    <h2>作品集</h2>
-                    <a href="/index.htm" target="_blank">
-                        <button id="backBtn">Back</button>
-                    </a>
-
-                </div>
-            </section>
-
+        <div data-aos="fade-up" data-aos-duration="3000">
             <!-- 作品區 -->
-            <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="middle" style="margin-top: 80px;">
 
+                <section id="products">
+                    <div class="products-container">
+                        <h2>作品集</h2>
+                        <a href="/index.htm" target="_blank">
+                            <button id="backBtn">Back</button></a>
+                    </div>
+                </section>
+
+                <!-- 作品區 -->
                 <section id="services">
-                    
+  
                     <div class="gallery-container" >
                         <div class="gallery-item" >
                             <img src="img\tree.jpg" alt="photo1" style="width: 100%;">
-
                             <div class="discript" >
                                 <h3>自然風景</h3>
                                 <p>這是一張日月潭的照片，呈現自然環境中的寧靜與優美。</p>
@@ -79,7 +74,6 @@
 
                         <div class="gallery-item" >
                             <img src="img\cat.jpg " alt="photo2" style="width: 100%;">
-
                             <div class="discript" >
                                 <h3>生活瞬間</h3>
                                 <p>這是一張貓咪的照片，捕捉日常中細膩而溫暖的時刻。</p>
@@ -88,20 +82,37 @@
 
                         <div class="gallery-item" >
                             <img src="img\noodle.jpg" alt="photo3" style="width: 100%;">
-
                             <div class="discript" >
                                 <h3>日常小確幸</h3>
                                 <p>這是一碗颱風天裡的泡麵，呈現生活中細微的溫暖時刻。</p>
                             </div>
                         </div>
 
-                    </div>
+                        <div class="gallery-item" >
+                            <img src="img\wash.jpg" alt="photo4" style="width: 100%;">
+                            <div class="discript" >
+                                <h3>生活紋理</h3>
+                                <p>這是一張擋風玻璃的照片，展現生活中不經意的紋理與細節。</p>`
+                            </div>
+                        </div>
 
+                    </div>
                 </section>
+            </div> 
+
+        </div> 
+
+        <!-- Modal 結構 -->
+        <div id="modal" class="modal">
+            <div class="modal-header">
+                <a id="downloadBtn" class="download-button" href="#" download>下載</a>
+                <span id="closeBtn" class="close-button">&times;</span>
             </div>
-        </div>
+            <img class="modal-content" id="modal-img" alt="Modal Image">
+          </div>
         
-        <section id="contact">
+        
+        <!-- <section id="contact">
             <h2 style="color: white;">聯絡方式</h2>
             <table>
                 <tr class="contact-container">
@@ -143,15 +154,14 @@
 
             </table>
             
-        </section>
+        </section> -->
         <div class="foot">
             <p>&copy; 2024 邱網。版權所有。</p>
         </div>
     </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script> AOS.init(); </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const count = 40;
@@ -236,6 +246,41 @@
             });
         });
 
+    </script>
+    <!-- JavaScript 負責行為控制 -->
+    <script>
+        // 取得 modal 相關元素
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.getElementById("closeBtn");
+        const downloadBtn = document.getElementById("downloadBtn");
+
+        // 加入點擊事件到每一個畫廊圖片
+        const galleryImages = document.querySelectorAll(".gallery-item img");
+        galleryImages.forEach(img => {
+        img.addEventListener("click", function() {
+            // 開啟 modal
+            modal.style.display = "block";
+            // 設定 modal 中的圖片來源為被點擊圖片的原始路徑
+            modalImg.src = this.src;
+            // 更新下載按鈕的連結與檔案名稱
+            downloadBtn.href = this.src;
+            let fileName = this.src.substring(this.src.lastIndexOf('/') + 1);
+            downloadBtn.setAttribute("download", fileName);
+        });
+        });
+
+        // 點擊關閉按鈕時關閉 modal
+        closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+        });
+
+        // 點擊 modal 區域（但非圖片）時也關閉
+        modal.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+        });
     </script>
 </body>
 </html>

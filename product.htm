@@ -176,63 +176,13 @@
             
         </section>
         <div class="foot">
-            <p>&copy; 2024 邱網。版權所有。</p>
+            <p>&copy; 2025 微攝山邱 版權所有</p>
         </div>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script> AOS.init(); </script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const count = 40;
-            const mean = (count - 1) / 2; // 中間索引
-            const sd = 8;                 // 標準差
-            const scale = 150;            // 高度縮放
-        
-            // 建立兩個容器參照
-            const upContainer = document.querySelector('.up-dist');
-            const downContainer = document.querySelector('.down-dist');
-        
-            //建立 
-            for (let i = 1; i <= count; i++) {
-            const el = document.createElement('div');
-            el.className = 'el';
-            upContainer.appendChild(el);
-            }
-
-            for (let i = 1; i <= count; i++) {
-            const el = document.createElement('div');
-            el.className = 'el';
-            downContainer.appendChild(el);
-            }
-
-            // 各自計算常態分佈位移
-            const yPositionsUp = Array.from({ length: count }, (_, i) => {
-                const dist = i - mean;
-                return -scale * Math.exp(-(dist * dist) / (2 * sd * sd)); // 往上
-            });
-            function runAnimation() {
-                // 先重置所有球的位置 (把 transform 清空)
-                anime.set('.up-dist .el', {
-                    translateY: 0
-                });
-                // 動畫：由下往上
-                anime({
-                    targets: '.up-dist .el',
-                    translateY: (el, i) => [0, yPositionsUp[i]],
-                    delay: (el, i) => Math.abs(i - mean) * 80, // 中間那顆先動
-                    duration: 1000,
-                    easing: 'easeOutQuad'
-                });
-            }
-            runAnimation();
-            
-            // 再次播放動畫
-            replayBtn.addEventListener('click', () => {
-                runAnimation();
-            });
-
-        });
         document.addEventListener('DOMContentLoaded', () => {
 
             // 監聽瀏覽器捲動事件

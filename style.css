@@ -126,7 +126,7 @@ nav ul li a:hover {
     color: #f4f4f4;
     display: flex;
     width: 80%;
-    height: 400px;
+    height: 430px;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
@@ -135,24 +135,12 @@ nav ul li a:hover {
     align-items: flex-end;
     scroll-margin-top: 80px;/* 根據 header 的高度調整 */
 }
-/* #about {
-    background-color: #1f1f1f;
-    color: #f4f4f4;
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    border-radius: 20px;
-    margin-bottom: 50px;
 
-    scroll-margin-top: 80px;/* 根據 header 的高度調整 
-} */
 .about_1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8); /* 黑色且有點透明 */
+    background-color: rgba(0, 0, 0, 0.7); /* 黑色且有點透明 */
     padding: 35px;
     border-radius: 0 0 20px 20px;
 }
@@ -369,7 +357,7 @@ table td{
     position: fixed;
     width: 4%;
     height: 4%;
-    top: 2%;
+    top: 3%;
     left: 50%;
     /* 關鍵：水平居中 → 往左移自身寬度的一半 */
     transform: translateX(-50%) rotate(0deg);

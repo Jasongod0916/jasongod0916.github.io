@@ -205,7 +205,7 @@ nav ul li a:hover {
 .gallery-container {
     display: grid;                         
     grid-template-columns: repeat(3, 1fr);   /* 三欄排版 */
-    gap: 10%;
+    gap: 8%;
     box-sizing: border-box;
     border-radius: 20px;
     padding: 20px;
@@ -219,6 +219,7 @@ nav ul li a:hover {
     flex-direction: column;  /* 圖片上方、下面呈現說明 */
     align-items: center;
     overflow: visible;       /* 允許圖片放大後超出容器顯示 */
+    padding: 10px;
   }
 
 /* 預設圖片樣式：固定 1:1 尺寸 */

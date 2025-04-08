@@ -94,7 +94,7 @@ nav ul li a:hover {
     flex-direction: column; /* 讓兩個區塊上下排列；若要左右並排，可改 row */
     align-items: center;
     gap: 10px;             /* 兩條分佈之間的距離 */
-    margin-top: 300px;
+    margin-top: 250px;
     margin-bottom: 50px;
   }
 .basic-staggering-demo {
@@ -120,13 +120,13 @@ nav ul li a:hover {
 }
 /* 簡介===================== */
 #about {
-    background-image: url('img/sea.jpg'); /* 替換為你的圖片路徑 */
+    background-image: url('img/sea2.jpg'); /* 替換為你的圖片路徑 */
     background-size: cover; /* 確保圖片覆蓋整個背景 */
     background-position: center; /* 圖片居中 */
     color: #f4f4f4;
     display: flex;
     width: 80%;
-    height: 600px;
+    height: 400px;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
@@ -158,12 +158,13 @@ nav ul li a:hover {
 }
 #about h2{
     font-size: 2em;
- 
+    margin-block-start: 0em;
 }
 #about p{
     font-size: 1.5em;
-    line-height: 1.6;
-    
+    line-height: 1.5;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 /* #about img{
     border-radius: 20px;
@@ -210,6 +211,7 @@ nav ul li a:hover {
 }
 /* 圖片區======================*/
 #services {
+    display: flex;
     background-color: #f4f4f4;
 }
 .gallery-container {
@@ -219,6 +221,7 @@ nav ul li a:hover {
     box-sizing: border-box;
     border-radius: 20px;
     padding: 20px;
+    /* margin-bottom: 100px; */
   }
 /* 個別照片項目 */
 .gallery-item {
@@ -233,6 +236,7 @@ nav ul li a:hover {
 /* 預設圖片樣式：固定 1:1 尺寸 */
 .gallery-item img {
     width: 400px;
+    /* width: 100%;  */
     height: 400px;
     object-fit: cover;
     display: block;
@@ -312,6 +316,7 @@ nav ul li a:hover {
     background-color: #1f1f1f;
     color: #f9f9f9;
     padding: 20px;
+    margin-top: 100px;
     text-align: center;
     height: 250px;
 }

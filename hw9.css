@@ -12,10 +12,10 @@ body {
   }
   
   .orange-shadow {
-    text-shadow: 4px 4px 10px orange;
+    text-shadow: 15px 15px 15px orange;
   }
   
   .gray-shadow {
-    text-shadow: 4px 4px 10px gray, 8px 8px 12px silver;
+    text-shadow: 10px 10px 10px gray, 50px 50px 12px silver;
   }
   
